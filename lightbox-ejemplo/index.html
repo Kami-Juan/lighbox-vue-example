@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="assets/js/lightbox/dist/css/lightbox.min.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+   <title>LightBox Ejemplo | Jquery</title>
+</head>
+<body>
+      <h1>Gatos Malosos</h1>
+   <div class="container" id="app">
+      <figure v-for="(gato, i) in gatos" >
+         <a 
+            :href="gato"
+            :data-lightbox="`gatitos`" 
+            :data-title="`Gato loco ${i+1}`"
+         >
+            <img 
+               :src="gato"             
+               :key="i"               
+            >
+         </a>
+      </figure>
+   </div>
+</body>
+   <script src="assets/js/lightbox/dist/js/lightbox-plus-jquery.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   <script src="assets/js/app.js"></script>
+</html>
